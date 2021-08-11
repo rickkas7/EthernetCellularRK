@@ -1,0 +1,6 @@
+.DS_Store
+.vscode
+*.bin
+target
+docs-xml
+api.md
