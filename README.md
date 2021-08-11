@@ -1,5 +1,8 @@
 # EthernetCellularRK
 
+- Github: [https://github.com/rickkas7/EthernetCellularRK](https://github.com/rickkas7/EthernetCellularRK)
+- License: MIT (can use in open-source or closed-source products including commercial products)
+
 This class and library is used with Gen 3 cellular devices (Boron, B Series SoM) that also have Ethernet connectivity. It is used for the case that you want to default to Ethernet, but fall back to cellular if the device loses its Ethernet connection.
 
 This requires additional hardware such as the Ethernet FeatherWing (Boron) or the B Series evaluation board or the equivalent WizNET W5500 circuitry on your own custom B Series Base Board.
@@ -54,6 +57,8 @@ EthernetCellular::instance().withCellularBackupColor(RGB_COLOR_CYAN);
 ```
 
 ## Members
+
+The [full browsable API documentation, including internal methods and fields](https://rickkas7.github.io/EthernetCellularRK/) is available, however the important methods you are most likely to need are summarized below.
 
 ---
 
