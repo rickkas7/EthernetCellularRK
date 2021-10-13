@@ -354,6 +354,29 @@ uint32_t getCellularBackupColor() const
 
 Value is an RGB color as a uint32_t of the form 0x00RRGGBB, matching the format of constants like RGB_COLOR_CYAN, RGB_COLOR_YELLOW, or RGB_COLOR_ORANGE.
 
+---
+
+### ActiveInterface EthernetCellular::getActiveInterface() const 
+
+Returns the enumeration for the currently active interface (NONE, CELLULAR, or ETHERNET)
+
+```
+ActiveInterface getActiveInterface() const
+```
+
+---
+
+### EthernetCellular & EthernetCellular::withInterfaceChangeCallback(std::function< void(ActiveInterface oldInterface, ActiveInterface newInterface)> callback) 
+
+Sets a notification callback for when the active interface changes.
+
+```
+EthernetCellular & withInterfaceChangeCallback(std::function< void(ActiveInterface oldInterface, ActiveInterface newInterface)> callback)
+```
+
+You can only have one interface change callback.
+
+---
 
 ## Version History
 
