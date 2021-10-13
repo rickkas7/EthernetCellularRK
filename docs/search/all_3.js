@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['getcellularbackupcolor_11',['getCellularBackupColor',['../class_ethernet_cellular.html#a4c0bd55adee73445bfd7817b1ee7cfda',1,'EthernetCellular']]],
-  ['getcellularcloudconnecttimeout_12',['getCellularCloudConnectTimeout',['../class_ethernet_cellular.html#aea8ca8cb7f1b603b0756713a5684a1b4',1,'EthernetCellular']]],
-  ['getcellularconnecttimeout_13',['getCellularConnectTimeout',['../class_ethernet_cellular.html#ab47d23ff22e0c6f50d08a06d29bc75c0',1,'EthernetCellular']]],
-  ['getcellularkeepalive_14',['getCellularKeepAlive',['../class_ethernet_cellular.html#aeb5252ee97007280b08185311c6f560c',1,'EthernetCellular']]],
-  ['getethernetcloudconnecttimeout_15',['getEthernetCloudConnectTimeout',['../class_ethernet_cellular.html#a1de8f8d091ff453122e7336e65d77457',1,'EthernetCellular']]],
-  ['getethernetconnecttimeout_16',['getEthernetConnectTimeout',['../class_ethernet_cellular.html#a31990f6d65e284d23ee8c2dd02e5b610',1,'EthernetCellular']]],
-  ['getethernetkeepalive_17',['getEthernetKeepAlive',['../class_ethernet_cellular.html#a541ae0899caff5687800802f789dfb74',1,'EthernetCellular']]],
-  ['getretryethernetperiod_18',['getRetryEthernetPeriod',['../class_ethernet_cellular.html#a53b3435a1767b942f98d1e9325fb9090',1,'EthernetCellular']]]
+  ['ethernetcellular_6',['EthernetCellular',['../class_ethernet_cellular.html',1,'EthernetCellular'],['../class_ethernet_cellular.html#a680c0c1cfa7abfdd3aaeb9bac64161ee',1,'EthernetCellular::EthernetCellular()'],['../class_ethernet_cellular.html#a6bff5398fc704b49b2110b193a4d4231',1,'EthernetCellular::EthernetCellular(const EthernetCellular &amp;)=delete']]],
+  ['ethernetcloudconnecttimeout_7',['ethernetCloudConnectTimeout',['../class_ethernet_cellular.html#a24a27f202dbbc26271b8296081b25dd6',1,'EthernetCellular']]],
+  ['ethernetconnecttimeout_8',['ethernetConnectTimeout',['../class_ethernet_cellular.html#a1ce9dac7788050e60d4fb26e2cec5b6a',1,'EthernetCellular']]],
+  ['ethernetkeepalive_9',['ethernetKeepAlive',['../class_ethernet_cellular.html#a9617b7bb6594fb2d5a62fbae9aac8897',1,'EthernetCellular']]],
+  ['ethernetpresent_10',['ethernetPresent',['../class_ethernet_cellular.html#a5048c8dbd2b2c73a7add06e756b9f7e8',1,'EthernetCellular']]],
+  ['ethernetcellularrk_11',['EthernetCellularRK',['../index.html',1,'']]]
 ];

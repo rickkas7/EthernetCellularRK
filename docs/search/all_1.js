@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['cellularbackupcolor_1',['cellularBackupColor',['../class_ethernet_cellular.html#abad1a2624125363827da78ed5bd001bf',1,'EthernetCellular']]],
-  ['cellularcloudconnecttimeout_2',['cellularCloudConnectTimeout',['../class_ethernet_cellular.html#a8eb116d23102e28cd4b895b2c063ded4',1,'EthernetCellular']]],
-  ['cellularconnecttimeout_3',['cellularConnectTimeout',['../class_ethernet_cellular.html#acd848af2e904494e940c7ca010981052',1,'EthernetCellular']]],
-  ['cellularkeepalive_4',['cellularKeepAlive',['../class_ethernet_cellular.html#ad847eb13cd1d5bbadb894893849abfcb',1,'EthernetCellular']]]
+  ['activeinterface_1',['activeInterface',['../class_ethernet_cellular.html#a7457738b037d66bad1381937c5c9d2cf',1,'EthernetCellular']]]
 ];

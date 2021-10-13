@@ -357,6 +357,10 @@ Value is an RGB color as a uint32_t of the form 0x00RRGGBB, matching the format 
 
 ## Version History
 
+### 0.0.2 (2021-10-13)
+
+- Added getActiveInterface() and withInterfaceChangeCallback()
+
 ### 0.0.1 (2021-08-11)
 
 - Initial version

@@ -1,11 +1,17 @@
 var searchData=
 [
-  ['withcellularbackupcolor_36',['withCellularBackupColor',['../class_ethernet_cellular.html#a96de5376f7933182473cc05db951596c',1,'EthernetCellular']]],
-  ['withcellularcloudconnecttimeout_37',['withCellularCloudConnectTimeout',['../class_ethernet_cellular.html#a0aadb083ba1823f8a4c92964844ee15b',1,'EthernetCellular']]],
-  ['withcellularconnecttimeout_38',['withCellularConnectTimeout',['../class_ethernet_cellular.html#aa53dd1cbcfd740d84774ffe1a6409c53',1,'EthernetCellular']]],
-  ['withcellularkeepalive_39',['withCellularKeepAlive',['../class_ethernet_cellular.html#a5fb24f4dae7714cc3a2f4ffaba7c1f33',1,'EthernetCellular']]],
-  ['withethernetcloudconnecttimeout_40',['withEthernetCloudConnectTimeout',['../class_ethernet_cellular.html#a48cca98536c0fe74b7ab572b960e21fe',1,'EthernetCellular']]],
-  ['withethernetconnecttimeout_41',['withEthernetConnectTimeout',['../class_ethernet_cellular.html#a59c99c92f3bdbee4b26bc9f0909a885f',1,'EthernetCellular']]],
-  ['withethernetkeepalive_42',['withEthernetKeepAlive',['../class_ethernet_cellular.html#a62303945cd1fe229e56aaa04b9367402',1,'EthernetCellular']]],
-  ['withretryethernetperiod_43',['withRetryEthernetPeriod',['../class_ethernet_cellular.html#a3b12c8328f255baa0e44381a56a72df2',1,'EthernetCellular']]]
+  ['setactiveinterface_26',['setActiveInterface',['../class_ethernet_cellular.html#ad69e03c6c30fe4c709a687613d9a4a23',1,'EthernetCellular']]],
+  ['setup_27',['setup',['../class_ethernet_cellular.html#a4fab8110f201a727e38a578acf507275',1,'EthernetCellular']]],
+  ['statecellularcloudconnected_28',['stateCellularCloudConnected',['../class_ethernet_cellular.html#a810a1fc0ced014d4efdfde6a2d9a844f',1,'EthernetCellular']]],
+  ['statecellularwaitdisconnectedthentryethernet_29',['stateCellularWaitDisconnectedThenTryEthernet',['../class_ethernet_cellular.html#a1228e93f6f77bcd677d8b65981d20f4e',1,'EthernetCellular']]],
+  ['stateethernetcloudconnected_30',['stateEthernetCloudConnected',['../class_ethernet_cellular.html#a606c1a2968dc13c4d48e274b3df97a96',1,'EthernetCellular']]],
+  ['statehandler_31',['stateHandler',['../class_ethernet_cellular.html#a9042ab67559f252e7b9928fa27010d67',1,'EthernetCellular']]],
+  ['statestart_32',['stateStart',['../class_ethernet_cellular.html#a57a38785ebd7d4fe4325acf7d45c0dbb',1,'EthernetCellular']]],
+  ['statetime_33',['stateTime',['../class_ethernet_cellular.html#aa448a8c5879c0d51d705314dced059ee',1,'EthernetCellular']]],
+  ['statetrycellular_34',['stateTryCellular',['../class_ethernet_cellular.html#a2992145d6be9634bc45732f37473e578',1,'EthernetCellular']]],
+  ['statetryethernet_35',['stateTryEthernet',['../class_ethernet_cellular.html#a4b73f9b86fa2543055d237b696d28e68',1,'EthernetCellular']]],
+  ['statewaitcellularcloud_36',['stateWaitCellularCloud',['../class_ethernet_cellular.html#a90111abfe5646b98309f5f5e210346ac',1,'EthernetCellular']]],
+  ['statewaitcellularready_37',['stateWaitCellularReady',['../class_ethernet_cellular.html#ab34d7e991aaa56397a7465e36a2254b1',1,'EthernetCellular']]],
+  ['statewaitethernetcloud_38',['stateWaitEthernetCloud',['../class_ethernet_cellular.html#a4c506303e9f91b627fedb79f1bc4b1f0',1,'EthernetCellular']]],
+  ['statewaitethernetready_39',['stateWaitEthernetReady',['../class_ethernet_cellular.html#a320ecefcff3267f74ba7d959dc75844b',1,'EthernetCellular']]]
 ];

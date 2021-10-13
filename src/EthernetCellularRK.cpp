@@ -25,6 +25,19 @@ void EthernetCellular::loop() {
     stateHandler(*this);
 }
 
+
+void EthernetCellular::setActiveInterface(ActiveInterface newActiveInterface) {
+    ActiveInterface oldActiveInterface = activeInterface;
+    activeInterface = newActiveInterface;
+
+    if (oldActiveInterface != newActiveInterface) {
+        if (interfaceChangeCallback) {
+            interfaceChangeCallback(oldActiveInterface, newActiveInterface);
+        }
+    }
+}
+
+
 void EthernetCellular::stateStart() {
     if (!System.featureEnabled(FEATURE_ETHERNET_DETECTION)) {
         _log.info("FEATURE_ETHERNET_DETECTION enabled (was disabled before)");
@@ -52,6 +65,7 @@ void EthernetCellular::stateStart() {
 void EthernetCellular::stateTryEthernet() {
     _log.info("Trying to connect by Ethernet");
     LEDSystemTheme::restoreDefault();
+    setActiveInterface(ActiveInterface::NONE);
 
     stateTime = millis();
     Cellular.disconnect();
@@ -78,6 +92,7 @@ void EthernetCellular::stateWaitEthernetReady() {
 void EthernetCellular::stateWaitEthernetCloud() {
     if (Particle.connected()) {
         _log.info("Cloud connected over Ethernet keepAlive=%d", (int) ethernetKeepAlive.count());
+        setActiveInterface(ActiveInterface::ETHERNET);
         Particle.keepAlive(ethernetKeepAlive.count());
         stateTime = millis();
         stateHandler = &EthernetCellular::stateEthernetCloudConnected;
@@ -108,6 +123,7 @@ void EthernetCellular::stateEthernetCloudConnected() {
 
 void EthernetCellular::stateTryCellular() {
     _log.info("Trying to connect by cellular");
+    setActiveInterface(ActiveInterface::NONE);
 
     // When in cellular backup mode, show breathing yellow instead of breathing cyan when cloud connected
     if (cellularBackupColor != RGB_COLOR_CYAN) {
@@ -151,6 +167,8 @@ void EthernetCellular::stateWaitCellularCloud() {
     if (Particle.connected()) {
         _log.info("Cloud connected over cellular keepAlive=%d", (int) cellularKeepAlive.count());
         Particle.keepAlive(cellularKeepAlive.count());
+        setActiveInterface(ActiveInterface::CELLULAR);
+
         stateTime = millis();
         stateHandler = &EthernetCellular::stateCellularCloudConnected;
         return;  
@@ -181,6 +199,7 @@ void EthernetCellular::stateCellularCloudConnected() {
         if (ethernetPresent) {
             _log.info("Trying Ethernet again");
             Particle.disconnect();
+            setActiveInterface(ActiveInterface::NONE);
 
             // We were really cloud connected before, so disconnecting will take
             // a non-zero amount of time. This does not happen when going

@@ -75,6 +75,12 @@
  */
 class EthernetCellular {
 public:
+    enum class ActiveInterface : int {
+        NONE = 0,
+        ETHERNET,
+        CELLULAR
+    };
+
     /**
      * @brief Gets the singleton instance of this class, allocating it if necessary
      * 
@@ -308,6 +314,20 @@ public:
      */
     uint32_t getCellularBackupColor() const { return cellularBackupColor; };
 
+    /**
+     * @brief Returns the enumeration for the currently active interface (NONE, CELLULAR, or ETHERNET)
+     */
+    ActiveInterface getActiveInterface() const { return activeInterface; };
+
+    /**
+     * @brief Sets a notification callback for when the active interface changes
+     * 
+     * You can only have one interface change callback.
+     */
+    EthernetCellular &withInterfaceChangeCallback(std::function<void(ActiveInterface oldInterface, ActiveInterface newInterface)> callback) {
+        interfaceChangeCallback = callback;
+        return *this;
+    }
 
 protected:
     /**
@@ -331,6 +351,13 @@ protected:
      * This class is a singleton and cannot be copied
      */
     EthernetCellular& operator=(const EthernetCellular&) = delete;
+
+    /**
+     * @brief Sets the active interface and calls the notification handler if necessary
+     * 
+     * Internal use only
+     */
+    void setActiveInterface(ActiveInterface newActiveInterface);
 
     /**
      * @brief Starting state at boot
@@ -556,6 +583,16 @@ protected:
      * only so many available colors.
      */    
     uint32_t cellularBackupColor = RGB_COLOR_YELLOW;
+
+    /**
+     * @brief The currently active interface
+     */
+    ActiveInterface activeInterface = ActiveInterface::NONE;
+
+    /**
+     * @brief Optional callback function to call when the active interface changes
+     */
+    std::function<void(ActiveInterface oldInterface, ActiveInterface newInterface)> interfaceChangeCallback = NULL;
 
     /**
      * @brief Singleton instance of this class
