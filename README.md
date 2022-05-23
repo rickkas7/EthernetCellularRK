@@ -380,6 +380,10 @@ You can only have one interface change callback.
 
 ## Version History
 
+### 0.0.3 (2022-05-23)
+
+- Can be compiled on Wi-Fi devices like the Argon. It should work but is currently untested.
+
 ### 0.0.2 (2021-10-13)
 
 - Added getActiveInterface() and withInterfaceChangeCallback()

@@ -4,6 +4,14 @@ EthernetCellular *EthernetCellular::_instance;
 
 static Logger _log("app.ethcell");
 
+#if Wiring_WiFi
+#define CellularOrWiFi WiFi
+#endif
+#if Wiring_Cellular
+#define CellularOrWiFi Cellular
+#endif
+
+
 // [static]
 EthernetCellular &EthernetCellular::instance() {
     if (!_instance) {
@@ -68,7 +76,7 @@ void EthernetCellular::stateTryEthernet() {
     setActiveInterface(ActiveInterface::NONE);
 
     stateTime = millis();
-    Cellular.disconnect();
+    CellularOrWiFi.disconnect();
     Ethernet.connect();
     stateHandler = &EthernetCellular::stateWaitEthernetReady;
 }
@@ -139,12 +147,12 @@ void EthernetCellular::stateTryCellular() {
 
     stateTime = millis();
     Ethernet.disconnect();
-    Cellular.connect();
+    CellularOrWiFi.connect();
     stateHandler = &EthernetCellular::stateWaitCellularReady;
 }
 
 void EthernetCellular::stateWaitCellularReady() {
-    if (Cellular.ready()) {
+    if (CellularOrWiFi.ready()) {
         // Have Ethernet link, try connecting to the Particle cloud
         Particle.connect();
         stateHandler = &EthernetCellular::stateWaitCellularCloud;
